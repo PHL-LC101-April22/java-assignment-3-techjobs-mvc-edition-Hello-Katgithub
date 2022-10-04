@@ -11,7 +11,83 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
+    <table th:fragment = "jobTables" class="job-listing" th:each="job : ${jobs}">
+        <tr>
+            <td>ID</td>
+            <td th:text="${job.id}"></td>
+        </tr>
+            <tr>
+                <td>Name</td>
+                <td th:text="${job.name}"></td>
+            </tr>
 
+        <tr>
+            <td>Employer</td>
+            <td th:text="${job.employer}"></td>
+        </tr>
+          <tr>
+              <td>Location</td>
+              <td th:text="${job.Location}"></td>
+          </tr>
+
+        <tr>
+            <td>Position Type</td>
+            <td th:text="${job.positionType}"></td>
+        </tr>
+
+        <tr>
+            <td>Skill</td>
+            <td th:text="${job.coreCompetency}"></td>
+        </tr>
+
+    </table>
+
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>All</th>-->
+<!--        <th>Employer</th>-->
+<!--        <th>Location</th>-->
+<!--        <th>Position Type</th>-->
+<!--        <th>Skill</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+
+<!--<tr th:each="column : ${columns}">-->
+<!--    <td th:text="${column.columnChoices}"></td>-->
+<!--    <td th:text="${column.employer}"></td>-->
+<!--&lt;!&ndash;    <td th:text="${column.positionType}"></td>&ndash;&gt;-->
+<!--&lt;!&ndash;    <td th:text="${column.coreCompetency}"></td>&ndash;&gt;-->
+<!--</tr>-->
+<!--<h3>Output</h3>-->
+<!--<table border="1">-->
+<!--    <tr>-->
+<!--&lt;!&ndash;        <th>ID</th>&ndash;&gt;-->
+<!--&lt;!&ndash;        <th>NAME</th>&ndash;&gt;-->
+<!--        <th>EMPLOYER</th>-->
+<!--        <th>LOCATION</th>-->
+<!--        <th>POSITION TYPE</th>-->
+<!--        <th>SKILL</th>-->
+<!--    </tr>-->
+<!--<li th:each="column : ${columnChoices}">-->
+<!--    <tr>-->
+<!--        <td th:text="${column.columnChoices}"></td>-->
+
+<!--    </tr>-->
+<!--    </li>-->
+<!--    </tr>-->
+<!--    <table>-->
+<!--        <th:block th:each="table : ${tableChoices}">-->
+<!--            <tr>-->
+<!--                <td th:text="${table.JobData.getAllEmployers()}"> Employers</td>-->
+<!--                <td th:text="${column.JobData.getAllLocations()}"> Locations</td>-->
+<!--                <td th:text="${column.JobData.getAllPositionTypes()}"> Positions</td>-->
+<!--                <td th:text="${column.getAllCoreCompetency()}"> Skills</td>-->
+<!--            </tr>-->
+<!--        </th:block>-->
+
+
+
+<!--    </table>-->
 </div>
 
 </body>
